@@ -1,0 +1,6 @@
+{
+  "name": "Dhanraj — haku",
+  "description": "Personal website of Dhanraj, aka haku, featuring projects, writing, and ideas rooted in electronics, software, and curious builds.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

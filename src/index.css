@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Switzer', sans-serif;
+  --font-serif: 'Gambarino', serif;
+  --font-mono: 'Switzer', monospace;
+}
+
+:root {
+  font-family: 'Switzer', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*, ::before, ::after {
+  font-family: 'Switzer', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .instrument-serif, .font-serif-custom {
+  font-family: 'Gambarino', serif !important;
+}
+
+body, p, span, a, button, input, textarea, code, pre, div, .font-inter, .font-sans, .font-mono {
+  font-family: 'Switzer', sans-serif !important;
+}
+
+@layer utilities {
+  .font-serif-custom {
+    font-family: 'Gambarino', serif !important;
+  }
+  .font-sans-custom {
+    font-family: 'Switzer', sans-serif !important;
+  }
+  .font-mono-custom {
+    font-family: 'Switzer', sans-serif !important;
+  }
+}
+
+/* Hide scrollbars for carousel and clean layout */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom background grid & dashed line aesthetics */
+.bg-grid-dashed {
+  background-image: linear-gradient(to right, #272727 1px, transparent 1px);
+  background-size: 800px 100%;
+}
+
+/* High performance GPU-accelerated transition & animation classes */
+@keyframes smoothFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes smoothPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.97) translate3d(0, 6px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+
+.animate-fadeIn {
+  animation: smoothFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.animate-popIn {
+  animation: smoothPopIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* Smooth Hardware Acceleration helper */
+.gpu-smooth {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
