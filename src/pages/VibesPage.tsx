@@ -106,7 +106,7 @@ export const VibesPage: React.FC<VibesPageProps> = ({ onBack }) => {
       </div>
 
       {allVibes.length > 0 && (
-        <div className="mt-8 w-full columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+        <div className="mt-6 w-full columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-3 space-y-3">
           {allVibes.map((item) => (
             <div
               key={item.id}
